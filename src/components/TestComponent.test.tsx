@@ -8,7 +8,7 @@ describe("TestComponent", () => {
   it("should not allow submitting negative number", async () => {
     const onSubmit = jest.fn();
     render(<TestComponent onSubmit={onSubmit} />);
-    const input = screen.getByLabelText("input label");
+    const input = screen.getByTestId("input-testid");
     expect(input).toBeTruthy();
     fireEvent.input(input, {
       target: {

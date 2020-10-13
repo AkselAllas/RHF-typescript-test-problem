@@ -13,8 +13,7 @@ const TestComponent = (onSubmit: any) => {
   return (
     <FormProvider {...reactHookFormMethods}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="firstName">input label:</label>
-        <input name="firstName" ref={register} />
+        <input data-testid="input-testid" name="firstName" ref={register} />
         <button type="submit">Submit</button>
       </form>
     </FormProvider>
