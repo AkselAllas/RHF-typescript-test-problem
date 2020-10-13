@@ -10,11 +10,11 @@ describe("TestComponent", () => {
     render(<TestComponent onSubmit={onSubmit} />);
     const input = screen.getByTestId("input-testid");
     expect(input).toBeTruthy();
-    fireEvent.input(input, {
-      target: {
-        value: "-12"
-      }
-    });
+    //fireEvent.input(input, {
+    //  target: {
+    //    value: "-12"
+    //  }
+    //});
     await act(async () => {
       fireEvent.submit(screen.getByRole("button", { name: /Submit/i }));
     });
